@@ -6,11 +6,24 @@ Personal solutions to [HDLBits](https://hdlbits.01xz.net/) exercises — a platf
 
 ```
 hdlBits/
-├── basics/                 # Basic gates and wiring
-├── modules/                # Module instantiation and hierarchy
-├── vectors/                # Vectors, concatenation, replication
-├── procedures/             # Procedural blocks (always, if, case)
-└── more_verilog_features/  # Reduction operators, generate, parameters
+├── basics/                      # Basic gates and wiring
+├── modules/                     # Module instantiation and hierarchy
+├── vectors/                     # Vectors, concatenation, replication
+├── procedures/                  # Procedural blocks (always, if, case)
+├── more_verilog_features/       # Reduction operators, generate, parameters
+└── Circuits/
+    ├── combinational_logic/
+    │   ├── basic_gates/
+    │   ├── multiplexers/
+    │   ├── arithmetic_circuits/
+    │   └── karnaugh_map_to_circuit/
+    └── sequential_logic/
+        ├── latches_and_flip_flops/
+        ├── counters/
+        ├── shift_registers/
+        ├── more_circuits/
+        ├── finite_state_machines/
+        └── building_larger_circuits/
 ```
 
 ## Contents
