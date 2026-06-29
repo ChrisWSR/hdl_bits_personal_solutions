@@ -1,0 +1,18 @@
+name: HDLBits Test Suite
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install iverilog
+        run: sudo apt-get install -y iverilog
+
+      - name: Install Python dependencies
+        run: pip install cocotb cocotb-test pytest pyyaml pydantic
+
+      - name: Run test suite
+        run: pytest tests/ -v --tb=short

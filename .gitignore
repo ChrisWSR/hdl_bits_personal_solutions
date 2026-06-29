@@ -1,0 +1,5 @@
+_generated/
+*.out
+__pycache__/
+.pytest_cache/
+sim_build/
