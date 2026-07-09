@@ -50,15 +50,9 @@ Reads per-directory `tests.yaml` files and returns `{relative_path → spec}` di
 
 Validates every spec against `ModuleSpec` (Pydantic model) at load time, catching YAML errors early with clear messages. Rejects empty `tests` or `sequence` lists.
 
-### `cli.py` — CLI orchestration
+### `loader.py` — also provides `init_specs()` for stub generation
 
-Used by `run_tests.py --init` to scan directories and generate `tests.yaml` stubs with parsed ports but empty test vectors.
-
-### Legacy: `generator.py` and `runner.py`
-
-These generated Verilog testbenches and ran iverilog manually. Replaced by cocotb + cocotb-test, but kept for reference.
-
-## `tests.yaml` format
+`run_tests.py --init` calls `loader.init_specs()` to scan directories and generate `tests.yaml` stubs with parsed ports but empty test vectors.
 
 ```yaml
 # basics/tests.yaml
